@@ -1,0 +1,260 @@
+/* -------------    Fonts -------------- */
+@font-face {
+    font-family: "Blenda Script";
+    src: url("../fonts/BlendaScript.otf") format("opentype");
+    font-weight: normal;
+}
+.monfrigo span, #page-show thead, #page-add form label,h2,input::placeholder, .menu {
+    font-family: "Blenda Script";
+}
+/*-------------- Général ------------*/
+h2{
+    padding: 12%;
+}
+ input,  select, body{
+    color : #2c2c2c
+}
+body{background-color: antiquewhite }
+
+#frigosvg, #lampe, .trashProduct,#formAdd button .icon,#formDons button .icon{
+    cursor: pointer;
+}
+/*-------------- Lampe ------------*/
+#lampe{
+    width: 38px;
+    position: fixed;
+    left: 5%;
+    z-index: 1;
+}
+/*-------------- Notifications ------------*/
+.notification {
+    height: 20px;
+    width: 20%;
+    margin-top: 1%;
+    margin-left: 76%;
+    transform-origin: right;
+    position: fixed;
+    z-index: 2;
+    border-radius: 320px;
+    text-align: center;
+}
+.succes{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    padding: 20px;
+}
+.succes:hover{
+    background-color: #cfef98;
+}
+.error{
+    color: #8a1010;
+    background-color: #f2bfbf;
+    padding: 20px;
+}
+.error:hover{
+    background-color: #f18585;
+}
+.medium{
+    color: #ce880e;
+    background-color: #f2d3bf;
+    padding: 20px;
+}
+.medium:hover{
+    background-color: #efb088;
+}
+@keyframes notifyClose {
+    0% {transform: scaleX(1);}
+    10% {transform: scaleX(1.1);}
+    13% {transform: scale(1);}
+    16% {transform: scale(1);}
+    100% {transform: scaleX(0);}
+}
+@-webkit-keyframes notify {
+    0% {transform: scaleX(0);}
+    10% {transform: scaleX(1);}
+    13% {transform: scale(1.1);}
+    16% {transform: scale(1);}
+    100% {transform: scaleX(1);}
+}
+/* -------------    Titre mon frigo -------------- */
+.monfrigo {
+    position: relative;
+    width: 520px;
+    height:400px;
+    margin: 0 auto;
+    font-size: 100px;
+    z-index: 0;
+}
+.monfrigo span {
+    color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 70px;
+    height: 400px;
+    margin-left: -35px;
+    line-height: 70px;
+    text-align: center;
+    transform-origin: bottom center;
+   /* border: 1px solid red;*/
+}
+.monfrigo:hover{
+    animation: animate 0.5s infinite;
+}
+.monfrigo span:nth-of-type(1)  {
+    transform: rotate(-32deg);
+}
+.monfrigo span:nth-of-type(2)  {
+    transform: rotate(-21deg);
+}
+.monfrigo span:nth-of-type(3)  {
+    transform: rotate(-13deg);
+}
+.monfrigo span:nth-of-type(4)  {
+    transform: rotate(0deg);
+}
+.monfrigo span:nth-of-type(5)  {
+    transform: rotate(5deg);
+}
+.monfrigo span:nth-of-type(6)  {
+    transform: rotate(12deg);
+}
+.monfrigo span:nth-of-type(7)  {
+    transform: rotate(17deg);
+}
+.monfrigo span:nth-of-type(8)  {
+    transform: rotate(24deg);
+}
+.monfrigo span:nth-of-type(9)  {
+    transform: rotate(32deg);
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/* --------------- Page content -------------*/
+#page{
+    position: relative;
+    top: -210px;
+}
+/* --------------- List products -------------*/
+#page-show {
+    padding-left: 3%;
+}
+#page-show table{width: 100%}
+#page-show thead{
+    font-size: 2em;
+}
+#page-show tr{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+#page-show #produits tr, #regerche{
+    background-color: #ffffff;
+    border: 0;
+    outline: 0;
+    border-radius: 320px;
+    padding: 16px;
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+}
+#page-show #produits img{
+    width: 20px;
+}
+#page-show #produits input{
+    border: none;
+    width: 50px;
+}
+#page-show #produits td{
+    width: 33%;
+}
+#page-show #produits td img{
+    float: right;
+}
+#page-show #produits td:nth-child(2){
+    text-align: center;
+}
+/* ------------- Champ recherche -------------- */
+#regerche{
+    background: antiquewhite;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+/*-------------- Form ajout produit -------------- */
+#page-add form{
+    padding: 9%;
+}
+#page-add form div{
+    display: flex;
+    padding-bottom: 5%;
+}
+#page-add label{
+    font-size: 1.3em;
+    flex-basis: 55%;
+    align-self: center;
+}
+
+#page-add form input, #page-add form select{
+    border: 0;
+    outline: 0;
+    font-size: 1.3em;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: white;
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+#page-add form input:focus, #regerche:focus, #page-add form select:focus{
+    box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+#page-add form button{
+    background: none;
+    border: none;
+}
+#page-add form button .icon{
+    float: left;
+    width: 60px;
+    height: 70px;
+}
+#page-add #formAdd button .icon{
+    background: url(../images/shopping-cart.svg) no-repeat;
+}
+#page-add #formDons button .icon{
+    background: url(../images/paper-plane-3.svg) no-repeat;
+}
+#page-add form button .icon:active{
+    background: url(../images/shopping-cartOrange.svg) no-repeat ;
+}
+#page-add #panier{
+    background: url("../images/cesta-vacia.svg") no-repeat;
+    width: 60px;
+    height: 70px;
+    float: right;
+}
+/* Se déclenche lors d'un ajout de produit */
+@keyframes animationNewProduct {
+    0% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}

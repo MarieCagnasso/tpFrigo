@@ -1,0 +1,146 @@
+/*-------------- Général ------------*/
+body.sombre{
+    background-color: #2c2c2c;
+    color:#fee;
+}
+
+.sombre input, .sombre select{
+    color: #fee;
+    background: #44484a;
+}
+/*-------------- Menu mobil ------------*/
+.sombre .menu {
+    background: #BE4949;
+}
+.sombre .menu ul li a:hover {
+    color: #BE4949;
+}
+/*-------------- Notifications ------------*/
+.sombre .succes{
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.sombre .succes:hover{
+    background-color: #cfef98;
+}
+.sombre .error{
+    color: #8a1010;
+    background-color: #f2bfbf;
+}
+.sombre .error:hover{
+    background-color: #f18585;
+}
+.sombre .medium{
+    color: #ce880e;
+    background-color: #f2d3bf;
+}
+.sombre .medium:hover{
+    background-color: #efb088;
+}
+/* -------------    Titre mon frigo -------------- */
+.sombre .monfrigo span {
+    color: #fee;
+}
+
+.sombre .monfrigo span:nth-of-type(2)  {
+    animation: blinkv1 linear infinite 3s;
+}
+
+.sombre .monfrigo span:nth-of-type(6)  {
+    animation: blinkv1 linear infinite 2s;
+}
+
+.sombre .monfrigo span:nth-of-type(9)  {
+    animation: blinkv2 linear infinite 2s;
+
+}
+.sombre .monfrigo {
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+/* Néon clignotant */
+@keyframes blinkv1 {
+    80% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    80.5%{
+        color: #333;
+    }
+    81% {
+
+        text-shadow: none;
+    }
+    81.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    82% {
+        color: #333;
+        text-shadow: none;
+    }
+    82.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    92.5% {
+        color: #333;
+        text-shadow: none;
+    }
+    92.8% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+}
+@keyframes blinkv2 {
+    10% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+    11%{
+        color: #333;
+    }
+    12% {
+
+        text-shadow: none;
+    }
+    12.5% {
+        color: inherit;
+        text-shadow: inherit;
+    }
+}
+/* ------------- Champ recherche -------------- */
+.sombre #page-show #produits tr, .sombre #regerche{
+    background-color: #44484a;
+    box-shadow: inset 2px 2px 5px #62646C, inset -5px -5px 10px #6f6f6f;
+}
+
+.sombre #regerche{
+    background: #44484a;
+}
+/*-------------- Boutton retour haut de page -------------- */
+.sombre .backTop{
+    background-color: #FF5757;
+}
+/*-------------- Form add -------------- */
+.sombre #page-add form input, .sombre #page-add form select{
+    background-color: #44484a;
+    box-shadow: inset 2px 2px 5px #62646C, inset -5px -5px 10px #6f6f6f;
+}
+.sombre #page-add form input:focus, .sombre #regerche:focus, .sombre #page-add form select:focus{
+    box-shadow:  inset 1px 1px 2px #62646C, inset -1px -1px 2px #6f6f6f;
+}
+/*
+#page-add #formAdd button .icon{
+    background: url(../images/shopping-cart.svg) no-repeat;
+}
+#page-add #formDons button .icon{
+    background: url(../images/paper-plane-3.svg) no-repeat;
+}
+
+#page-add form button .icon:active{
+    background: url(../images/shopping-cartOrange.svg) no-repeat ;
+}*/
+.sombre #page-add #panier{
+  /*  background: url("../images/cesta-vacia.svg") no-repeat;*/
+}

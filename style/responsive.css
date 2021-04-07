@@ -1,0 +1,173 @@
+/* --------------- Retour en haut de page -------------*/
+.backTop{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    height: 40px;
+    border-radius: 50%;
+    width: 40px;
+    cursor: pointer;
+    background-color: #FFA500;
+    color: white;
+}
+
+/* --------------- Menu mobile -------------*/
+.menuMobil{
+    position: absolute;
+    top: 7%;
+    right: 2%;
+}
+.menuMobil img{
+    width: 30%;
+    float: right;
+}
+#menuArea input {
+    display: none;
+}
+
+.menuOpen, .menuMobil {
+    cursor: pointer;
+}
+.menuOpen{
+    z-index: 1;
+}
+.menuClose {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.5;
+}
+.menuClose:before, .menuClose:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.menuClose:before {
+    transform: rotate(45deg);
+}
+.menuClose:after {
+    transform: rotate(-45deg);
+}
+
+.menuClose:hover{
+    opacity: 1;
+}
+
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #ff8702;
+}
+
+.menu .menuContent {
+    position: relative;
+    top: 50%;
+    font-size: 54px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: -170px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.menu ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 10px 0;
+}
+
+.menu ul li a:hover {
+    color: #ff8702;
+}
+
+.menu ul li:hover {
+    background: white;
+}
+
+.menuEffects {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 1;
+}
+
+.menuEffects ul {
+    transform: translateY(0%);
+    transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects ul {
+    opacity: 1;
+}
+/* --------------- For desktop -------------*/
+@media (min-width: 968px) {
+    #page{display: flex;}
+    #page-add{ width: 34%; display: initial}
+    #frigo{width: 33%;}
+    #page-show {width: 28%;}
+    .menuMobil{display: none}
+    #page-show #produits {
+        overflow-y: scroll;
+        height: 525px;
+    }
+}
+/* --------------- For tablets -------------*/
+@media (max-width: 968px) {
+    #frigo{width: 0;}
+    #page-add{ width: 100%;}
+    #page-add form{padding: 3%}
+    h2 {padding: 0}
+}
+/* --------------- For mobil -------------*/
+@media (max-width: 605px) {
+    #lampe {width: 25px;}
+    .menuOpen img{width: 20%}
+    .monfrigo{font-size: 45px; width: 0}
+    .monfrigo span:nth-of-type(1)  {
+        transform: rotate(-12deg);
+    }
+    .monfrigo span:nth-of-type(2)  {
+        transform: rotate(-7.5deg);
+    }
+    .monfrigo span:nth-of-type(3)  {
+        transform: rotate(-4deg);
+    }
+    .monfrigo span:nth-of-type(4)  {
+        transform: rotate(0deg);
+    }
+    .monfrigo span:nth-of-type(5)  {
+        transform: rotate(2deg);
+    }
+    .monfrigo span:nth-of-type(6)  {
+        transform: rotate(5.2deg);
+    }
+    .monfrigo span:nth-of-type(7)  {
+        transform: rotate(8deg);
+    }
+    .monfrigo span:nth-of-type(8)  {
+        transform: rotate(11deg);
+    }
+    .monfrigo span:nth-of-type(9)  {
+        transform: rotate(14.5deg);
+    }
+}
